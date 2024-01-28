@@ -1,0 +1,60 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: "dev"
+
+---
+
+spring:
+  profiles: "dev"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 0709@Abhi
+    url: jdbc:mysql://localhost:3307/dcbapp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello World !!
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+  profiles: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 0709@Abhi
+    url: jdbc:mysql://localhost:3307/dcbapp-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello World !!
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 0709@Abhi
+    url: jdbc:mysql://localhost:3307/dcbapp-prod
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello World !!
