@@ -11,7 +11,7 @@ spring:
   profiles: "dev"
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 0709@Abhi
+    password: 
     url: jdbc:mysql://localhost:3307/dcbapp
     username: root
   jpa:
@@ -30,7 +30,7 @@ spring:
   profiles: qa
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 0709@Abhi
+    password: 
     url: jdbc:mysql://localhost:3307/dcbapp-qa
     username: root
   jpa:
@@ -49,7 +49,7 @@ spring:
   profiles: prod
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 0709@Abhi
+    password: 
     url: jdbc:mysql://localhost:3307/dcbapp-prod
     username: root
   jpa:
